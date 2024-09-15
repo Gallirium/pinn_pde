@@ -1,0 +1,31 @@
+run: TEST_KDV
+domain: <class 'fbpinns.domains.RectangularDomainND'>
+domain_init_kwargs: {'xmin': array([ 0., -5.]), 'xmax': array([1.5, 5. ])}
+problem: <class '__main__.KdV'>
+problem_init_kwargs: {'c': 1, 'a': 1}
+decomposition: <class 'fbpinns.decompositions.RectangularDecompositionND'>
+decomposition_init_kwargs: {'subdomain_xs': [array([0. , 0.3, 0.6, 0.9, 1.2, 1.5]), array([-5.        , -4.47368421, -3.94736842, -3.42105263, -2.89473684,
+       -2.36842105, -1.84210526, -1.31578947, -0.78947368, -0.26315789,
+        0.26315789,  0.78947368,  1.31578947,  1.84210526,  2.36842105,
+        2.89473684,  3.42105263,  3.94736842,  4.47368421,  5.        ])], 'subdomain_ws': [array([0.81, 0.81, 0.81, 0.81, 0.81, 0.81]), array([1.42105263, 1.42105263, 1.42105263, 1.42105263, 1.42105263,
+       1.42105263, 1.42105263, 1.42105263, 1.42105263, 1.42105263,
+       1.42105263, 1.42105263, 1.42105263, 1.42105263, 1.42105263,
+       1.42105263, 1.42105263, 1.42105263, 1.42105263, 1.42105263])], 'unnorm': (0.0, 1.0)}
+network: <class 'fbpinns.networks.FCN'>
+network_init_kwargs: {'layer_sizes': [2, 16, 1]}
+n_steps: 50000
+scheduler: <class 'fbpinns.schedulers.LineSchedulerRectangularND'>
+scheduler_kwargs: {'point': [0.0], 'iaxis': 1}
+ns: ((60, 200),)
+n_test: (60, 200)
+sampler: grid
+optimiser: <function adam at 0x7b520f569800>
+optimiser_kwargs: {'learning_rate': 0.001}
+seed: 0
+summary_freq: 1000
+test_freq: 1000
+model_save_freq: 10000
+show_figures: True
+save_figures: False
+clear_output: True
+hostname: gallirium

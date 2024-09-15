@@ -1,0 +1,29 @@
+run: TEST_Laplace
+domain: <class 'fbpinns.domains.RectangularDomainND'>
+domain_init_kwargs: {'xmin': array([0., 0.]), 'xmax': array([1., 1.])}
+problem: <class '__main__.Laplace2D_quadratic'>
+problem_init_kwargs: {'sd': 0.2}
+decomposition: <class 'fbpinns.decompositions.RectangularDecompositionND'>
+decomposition_init_kwargs: {'subdomain_xs': [array([0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
+       0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ]), array([0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
+       0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ])], 'subdomain_ws': [array([0.18888889, 0.18888889, 0.18888889, 0.18888889, 0.18888889,
+       0.18888889, 0.18888889, 0.18888889, 0.18888889, 0.18888889]), array([0.18888889, 0.18888889, 0.18888889, 0.18888889, 0.18888889,
+       0.18888889, 0.18888889, 0.18888889, 0.18888889, 0.18888889])], 'unnorm': (0.0, 1.0)}
+network: <class 'fbpinns.networks.FCN'>
+network_init_kwargs: {'layer_sizes': [2, 32, 1]}
+n_steps: 50000
+scheduler: <class 'fbpinns.schedulers.AllActiveSchedulerND'>
+scheduler_kwargs: {}
+ns: ((80, 80),)
+n_test: (200, 200)
+sampler: grid
+optimiser: <function adam at 0x7b520f569800>
+optimiser_kwargs: {'learning_rate': 0.001}
+seed: 0
+summary_freq: 1000
+test_freq: 1000
+model_save_freq: 10000
+show_figures: True
+save_figures: False
+clear_output: True
+hostname: gallirium

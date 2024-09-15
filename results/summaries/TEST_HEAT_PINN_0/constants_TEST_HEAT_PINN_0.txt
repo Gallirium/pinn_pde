@@ -1,0 +1,27 @@
+run: TEST_HEAT_PINN_0
+domain: <class 'fbpinns.domains.RectangularDomainND'>
+domain_init_kwargs: {'xmin': array([-1.,  0.]), 'xmax': array([1., 1.])}
+problem: <class '__main__.Heat'>
+problem_init_kwargs: {'alpha': 0.4, 'n': 1, 'L': 1}
+decomposition: <class 'fbpinns.decompositions.RectangularDecompositionND'>
+decomposition_init_kwargs: {'subdomain_xs': [Array([-1.        , -0.7777778 , -0.5555556 , -0.33333328, -0.11111113,
+        0.11111116,  0.33333337,  0.5555556 ,  0.7777778 ,  1.        ],      dtype=float32), Array([0.  , 0.25, 0.5 , 0.75, 1.  ], dtype=float32)], 'subdomain_ws': [array([0.5999998, 0.5999998, 0.5999998, 0.5999998, 0.5999998, 0.5999998,
+       0.5999998, 0.5999998, 0.5999998, 0.5999998], dtype=float32), array([0.675, 0.675, 0.675, 0.675, 0.675], dtype=float32)], 'unnorm': (0.0, 1.0)}
+network: <class 'fbpinns.networks.FCN'>
+network_init_kwargs: {'layer_sizes': [2, 16, 1]}
+n_steps: 150000
+scheduler: <class 'fbpinns.schedulers.LineSchedulerRectangularND'>
+scheduler_kwargs: {'point': [0.0], 'iaxis': 0}
+ns: ((40, 40),)
+n_test: (100, 100)
+sampler: grid
+optimiser: <function adam at 0x7e3ca5159800>
+optimiser_kwargs: {'learning_rate': 0.0001}
+seed: 0
+summary_freq: 1000
+test_freq: 1000
+model_save_freq: 10000
+show_figures: True
+save_figures: False
+clear_output: False
+hostname: gallirium
